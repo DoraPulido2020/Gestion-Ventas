@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import clienteAxios from '../axios/ClienteAxios'
 import MenuVentas from './menuVentas'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 
 function EditarVenta(){
 
     const params = useParams()
+    const navigate = useNavigate();
 
     //hooks
     const[factura, setFactura] = useState('')
@@ -63,7 +64,8 @@ function EditarVenta(){
             confirmButtonText: 'Ok'
         })
         .then(response => {
-            window.location = '/listaVentas';
+            navigate('/listaVentas')
+            // window.location = '/listaVentas';
         })
     }
 

@@ -3,9 +3,12 @@ import uniquid from 'uniqid'
 import clienteAxios from '../axios/ClienteAxios'
 import MenuVentas from './menuVentas'
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
 
 
 function AgregarVenta(){
+
+    const navigate = useNavigate();
 
     //hooks
     const[factura, setFactura] = useState('')
@@ -44,7 +47,8 @@ function AgregarVenta(){
             confirmButtonText: 'Ok'
         })
         .then(response => {
-            window.location = '/listaVentas';
+            navigate('/listaVentas')
+            // window.location = '/listaVentas';
         })
     }
 

@@ -3,9 +3,12 @@ import uniquid from 'uniqid'
 import MenuUsuario from '../menuUsuario'
 import clienteAxios from '../../axios/ClienteAxios';
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom';
 
 
 function AgregarRol(){
+
+    const navigate = useNavigate();
 
     //hooks
     const[nombre, setNombre] = useState('')
@@ -32,7 +35,8 @@ function AgregarRol(){
             confirmButtonText: 'Ok'
         })
         .then(response => {
-            window.location = '/listaRoles';
+            navigate('/listaRoles')
+            // window.location = '/listaRoles';
         })
     }
 

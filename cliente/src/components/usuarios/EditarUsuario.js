@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import MenuUsuario from './menuUsuario'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import clienteAxios from '../axios/ClienteAxios'
 import Swal from 'sweetalert2'
 
@@ -8,6 +8,7 @@ import Swal from 'sweetalert2'
 function EditarUsuario(){
 
     const params = useParams()
+    const navigate = useNavigate();
 
     //hooks
     const[correo, setCorreo] = useState('')
@@ -51,7 +52,8 @@ function EditarUsuario(){
             confirmButtonText: 'Ok'
         })
         .then(response => {
-            window.location = '/listaUsuarios';
+            navigate('/listaUsuarios')
+            // window.location = '/listaUsuarios';
         })
     }
 

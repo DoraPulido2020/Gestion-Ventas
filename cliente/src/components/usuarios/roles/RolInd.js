@@ -1,10 +1,12 @@
 import React from "react"
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import clienteAxios from "../../axios/ClienteAxios"
 import Swal from 'sweetalert2'
 
 
 function RolInd({rol}) {
+
+    const navigate = useNavigate();
 
     function borrarRol(idrol){
 
@@ -17,7 +19,8 @@ function RolInd({rol}) {
             confirmButtonText: 'Ok'
         })
         .then(response => {
-            window.location = '/listaRoles';
+            navigate('/listaRoles')
+            // window.location = '/listaRoles';
         })
     }
 

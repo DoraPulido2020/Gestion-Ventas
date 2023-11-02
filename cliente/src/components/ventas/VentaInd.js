@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import clienteAxios from '../axios/ClienteAxios'
 import Swal from 'sweetalert2'
 
 function VentaInd({venta}) {
+
+    const navigate = useNavigate();
 
     const[datausuario, setDatausuario] = useState([])
 
@@ -32,7 +34,8 @@ function VentaInd({venta}) {
             confirmButtonText: 'Ok'
         })
         .then(response => {
-            window.location = '/listaVentas';
+            navigate('/listaVentas')
+            // window.location = '/listaVentas';
         })
     }
 

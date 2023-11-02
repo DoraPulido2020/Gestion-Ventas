@@ -1,9 +1,11 @@
 import React from "react"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import clienteAxios from '../axios/ClienteAxios'
 import Swal from 'sweetalert2'
 
 function ProductoInd({producto}) {
+
+    const navigate = useNavigate();
 
     function borrarProducto(idproducto){
         clienteAxios.post('producto/borrarProducto', {idproducto: idproducto})
@@ -15,7 +17,8 @@ function ProductoInd({producto}) {
             confirmButtonText: 'Ok'
         })
         .then(response => {
-            window.location = '/listaProductos';
+            navigate('/listaProductos')
+            // window.location = '/listaProductos';
         })
     }
 

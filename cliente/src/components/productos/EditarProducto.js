@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import clienteAxios from '../axios/ClienteAxios'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import MenuProductos from './menuProductos'
 import Swal from 'sweetalert2'
 
@@ -8,6 +8,7 @@ import Swal from 'sweetalert2'
 function EditarProducto(){
 
     const params = useParams()
+    const navigate = useNavigate();
 
     //hooks
     const[codigop, setCodigop] = useState('')
@@ -56,7 +57,8 @@ function EditarProducto(){
             confirmButtonText: 'Ok'
         })
         .then(response => {
-            window.location = '/listaProductos';
+            navigate('/listaProductos')
+            // window.location = '/listaProductos';
         })
     }
 

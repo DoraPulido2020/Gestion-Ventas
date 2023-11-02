@@ -3,8 +3,11 @@ import uniquid from 'uniqid'
 import clienteAxios from '../axios/ClienteAxios'
 import MenuProductos from './menuProductos'
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
 
 function AgregarProducto(){
+
+    const navigate = useNavigate();
 
     //hooks
     const[codigop, setCodigop] = useState('')
@@ -39,7 +42,8 @@ function AgregarProducto(){
             confirmButtonText: 'Ok'
         })
         .then(response => {
-            window.location = '/listaProductos';
+            navigate('/listaProductos')
+            // window.location = '/listaProductos';
         })
     }
 

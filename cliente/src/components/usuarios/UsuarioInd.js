@@ -1,5 +1,5 @@
 import React from "react"
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import clienteAxios from "../axios/ClienteAxios"
 import Swal from 'sweetalert2'
 
@@ -7,6 +7,8 @@ import Swal from 'sweetalert2'
 function UsuarioInd({usuario}) {
 
     function borrarusuario(idusuario){
+
+        const navigate = useNavigate();
 
         clienteAxios.post('usuario/borrarUsuario', {idusuario: idusuario})
         .then(err => {console.log(err)})
@@ -17,7 +19,8 @@ function UsuarioInd({usuario}) {
             confirmButtonText: 'Ok'
         })
         .then(response => {
-            window.location = '/listaUsuarios';
+            navigate('/listaUsuarios')
+            // window.location = '/listaUsuarios';
         })
     }
 

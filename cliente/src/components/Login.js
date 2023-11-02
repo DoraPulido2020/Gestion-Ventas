@@ -63,6 +63,7 @@ function Login() {
             </div>
             <div className='col-6'>
                 <img className='w-100' src='portada.png'></img>
+                
             </div>
         </div>
     )
