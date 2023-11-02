@@ -6,9 +6,9 @@ import Swal from 'sweetalert2'
 
 function UsuarioInd({usuario}) {
 
-    function borrarusuario(idusuario){
+    const navigate = useNavigate();
 
-        const navigate = useNavigate();
+    function borrarusuario(idusuario){
 
         clienteAxios.post('usuario/borrarUsuario', {idusuario: idusuario})
         .then(err => {console.log(err)})
