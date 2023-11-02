@@ -32,24 +32,24 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path='/' element={<Login/>} exact></Route>
-          <Route path='/inicio' element={<Home/>} exact></Route>
+          <Route path='/' element={<Login/>}></Route>
+          <Route path='/inicio' element={<Home/>}></Route>
 
-          <Route path='/listaUsuarios' element={<ListaUsuarios/>} exact></Route>
-          <Route path='/agregarUsuario' element={<AgregarUsuario/>} exact></Route>
-          <Route path='/editarUsuario/:idusuario' element={<EditarUsuario/>} exact></Route>
+          <Route path='/listaUsuarios' element={<ListaUsuarios/>}></Route>
+          <Route path='/agregarUsuario' element={<AgregarUsuario/>}></Route>
+          <Route path='/editarUsuario/:idusuario' element={<EditarUsuario/>}  ></Route>
 
-          <Route path='/listaRoles' element={<ListaRoles/>} exact></Route>
-          <Route path='/agregarRol' element={<AgregarRol/>} exact></Route>
-          <Route path='/editarRol/:idrol' element={<EditarRol/>} exact></Route>
+          <Route path='/listaRoles' element={<ListaRoles/>}></Route>
+          <Route path='/agregarRol' element={<AgregarRol/>}></Route>
+          <Route path='/editarRol/:idrol' element={<EditarRol/>}  ></Route>
 
-          <Route path='/listaVentas' element={<ListaVentas/>} exact></Route>
-          <Route path='/agregarVenta' element={<AgregarVenta/>} exact></Route>
-          <Route path='/editarVenta/:idventa' element={<EditarVenta/>} exact></Route> 
+          <Route path='/listaVentas' element={<ListaVentas/>}></Route>
+          <Route path='/agregarVenta' element={<AgregarVenta/>}></Route>
+          <Route path='/editarVenta/:idventa' element={<EditarVenta/>}></Route> 
 
-          <Route path='/listaProductos' element={<ListaProductos/>} exact></Route>
-          <Route path='/agregarProducto' element={<AgregarProducto/>} exact></Route>
-          <Route path='/editarProducto/:idproducto' element={<EditarProducto/>} exact></Route> 
+          <Route path='/listaProductos' element={<ListaProductos/>}></Route>
+          <Route path='/agregarProducto' element={<AgregarProducto/>}></Route>
+          <Route path='/editarProducto/:idproducto' element={<EditarProducto/>}></Route> 
 
         </Routes>
       </Router>
