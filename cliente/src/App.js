@@ -11,7 +11,6 @@ import AgregarVenta from './components/ventas/AgregarVenta';
 import EditarVenta from './components/ventas/EditarVenta';
 import './index.css';
 
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ListaProductos from './components/productos/ListaProductos';
 import AgregarProducto from './components/productos/AgregarProducto';
 import EditarProducto from './components/productos/EditarProducto';
