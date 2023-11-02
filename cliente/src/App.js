@@ -16,6 +16,7 @@ import ListaProductos from './components/productos/ListaProductos';
 import AgregarProducto from './components/productos/AgregarProducto';
 import EditarProducto from './components/productos/EditarProducto';
 
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
         </div>
       </nav>
 
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path='/' element={<Login/>} exact></Route>
           <Route path='/inicio' element={<Home/>} exact></Route>
@@ -52,7 +53,7 @@ function App() {
           <Route path='/editarProducto/:idproducto' element={<EditarProducto/>} exact></Route> 
 
         </Routes>
-      </BrowserRouter>
+      </Router>
 
     </div>
   );
