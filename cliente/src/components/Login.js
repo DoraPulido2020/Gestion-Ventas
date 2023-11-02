@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import clienteAxios from './axios/ClienteAxios'
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
 
 
-function Login(){
+function Login() {
+
+    const navigate = useNavigate();
 
     const[correo, setCorreo] = useState('')
     const[clave, setClave] = useState('')
@@ -24,8 +27,8 @@ function Login(){
         let status = true
         datausuario.map(usuario => {
             if(usuario.correo == correo && usuario.clave == clave){
-                status = false
-                window.location = '/inicio';
+                status = 
+                navigate('/inicio')
             }
         })
 
