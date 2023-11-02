@@ -4,7 +4,7 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors({
-    origin: "https://gestor-ventas-xb5v.onrender.com/"
+    origin: "https://gestor-ventas-xb5v.onrender.com"
 }))
 
 //import conexion mongoDB
